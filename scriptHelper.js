@@ -18,12 +18,38 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
  }
  
  function validateInput(testInput) {
+    /*
+    validateInput() takes a string and returns "Empty", "Not a Number" or "Is a Number"
+    where appropriate. The data from validateInput() will be fed to formSubmission().
+    */
+    if (testInput === '') {
+        return "Empty";
+        } else if (!isNaN(testInput)) {
+        return "Is a Number";
+        } else {
+            return "Not a Number";
+        }
     
  }
  
  function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
+ //check if pilot, co-pilot, fuelLevel, cargoLevel are empty strings
+    if (pilot === "" || copilot === "" || fuelLevel === "" || cargoLevel === "") {
+        window.alert("Make sure all fields are filled before proceeding")   }
     
- }
+    if (validateInput(cargoLevel) === "Not a Number" || validateInput(fuelLevel) === "Not a Number") {
+        window.alert("Yo homie, you need to put a number there!")    }
+
+    let pilotStatus = document.getElementById("pilotStatus")
+    let copilotStatus = document.getElementById("copilotStatus")   
+    let fuelStatus = document.getElementById("fuelStatus")
+    let cargoStatus = document.getElementById("cargoStatus")
+    let launchStatus = document.getElementById("launchStatus") // turns green and displays "Shuttle is ready for launch"
+    let faultyItems = document.getElementById("faultyItems") // updated when item not ready for launch
+
+
+}
+
  
  async function myFetch() {
      let planetsReturned;
