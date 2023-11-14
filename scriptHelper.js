@@ -90,13 +90,13 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
      let planetsReturned;
  
      planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
-      planets.json().then(function(json) {
+      return response.json();
 
        });
  
      return planetsReturned;
      }
-  )} 
+   
  function pickPlanet(planets) {
  }
 
