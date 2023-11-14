@@ -5,7 +5,7 @@ require('cross-fetch/polyfill');
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
     let missionTarget = document.getElementById('missionTarget');
     for (let i=0; i<json.length; i++) {
-    missionTarget.innerHTML += `
+    missionTarget.innerHTML = `
     
      <h2>Mission Destination</h2>
            <ol>
@@ -15,7 +15,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                <li>Distance from Earth: ${distance}</li>
                <li>Number of Moons: ${moons}</li>
            </ol>
-           <img src=${imgUrl}>
+           <img src="${imgUrl}">
     `
   }
   
