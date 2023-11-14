@@ -45,23 +45,23 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     if (pilot === "" || copilot === "" || fuelLevel === "" || cargoLevel === "") {
       alert("Each form must be filled out");
       event.preventDefault();
-  //check if pilot and copilot have valid names and prompts user if not  
+//check if pilot and copilot have valid names and prompts user if not  
     } else if (isNaN(pilot) === false || isNaN(copilot) === false) {
       alert("Enter valid names for Pilot and Co-pilot");
       event.preventDefault();
    
-     if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoMass) === "Not a Number") {
-       alert("these need to be numbers");
-
-  //check if fuel is >10,000 
-  //  } else if (isNaN(fuelLevel) === true) {
-      } else if (fuelLevel <= 10000) {
-      alert("Fuel Level must be greater than 10,000.");
+    } else if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoMass) === "Not a Number") {
+      alert("these need to be numbers");
       event.preventDefault();
 
-      //check if cargo mass is <10,000  
-    } else if (cargoLevel > 10000) {
-      alert("Cargo Mass must be less than 10,000");
+//check if fuel is >10,000 
+      } else if (fuelLevel >= 10000) {
+      alert("Fuel level high enough for launch");
+      event.preventDefault();
+      
+//check if cargo mass is <10,000  
+      if (cargoLevel > 10000) {
+      alert("Cargo mass too heavy for launch");
       event.preventDefault();  
 
     } else {
@@ -70,7 +70,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
     }
 
     if (fuelLevel < 10000) {
-        faultyItems.style.visibility = "visible";
+        list.setAttribute('style', 'visibility = "visible"');
         launchStatus.innerHTML = "Shuttle Not Ready for Launch";
         launchStatus.style.color = "red";
         fuelStatus.innerHTML = "Fuel level too low for launch";
@@ -79,7 +79,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
       }
 
       if (cargoMass.value >= 10000) {
-        faultyItems.style.visibility = "visible";
+        list.setAttribute('style', 'visibility = ""');
         launchStatus.innerHTML = "Shuttle Not Ready for Launch";
         launchStatus.style.color = "red";
         cargoStatus.innerHTML = "Cargo mass too heavy for launch";
@@ -88,11 +88,11 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
         cargoStatus.innerHTML = "Cargo mass low enough for launch";
         }
         
-        if (cargoMass.value <= 10000 && fuelLevel.value >= 10000) {
+        if (cargoMass.value < 10000 && fuelLevel.value >= 10000) {
         launchStatus.innerHTML = "Shuttle is Ready for Launch";
         launchStatus.style.color = "green";
         cargoStatus.innerHTML = "Cargo mass low enough for launch";
-        faultyItems.style.visibility = "hidden";
+        list.setAttribute('style', 'visibility = "hidden"');
       }
       event.preventDefault();
     }

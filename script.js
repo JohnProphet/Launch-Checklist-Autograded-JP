@@ -1,8 +1,8 @@
-const { formSubmission } = require("./scriptHelper");
+//const { formSubmission } = require("./scriptHelper");
 
 // Write your JavaScript code here!
-window.addEventListener("load", function() {
-
+window.addEventListener("load", function(event) {
+    event.preventDefault();
     let listedPlanets;
     // Set listedPlanetsResponse equal to the value returned by calling myFetch()
     let listedPlanetsResponse;
