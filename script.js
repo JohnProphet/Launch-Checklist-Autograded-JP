@@ -1,4 +1,6 @@
-const { formSubmission } = require("./scriptHelper");
+const { formSubmission, addDestinationInfo } = require("./scriptHelper");
+
+addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl);
 
 // Write your JavaScript code here!
 window.addEventListener("load", function(event) {
