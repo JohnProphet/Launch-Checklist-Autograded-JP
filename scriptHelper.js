@@ -30,7 +30,7 @@ function validateInput(testInput) {
 }
  
 function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargoMass) {
-  let faultyItems = document.getElementById("faultyItems") // updated when item not ready for launch
+
   let launchStatus = document.getElementById("launchStatus") // turns green and displays "Shuttle is ready for launch"
   let pilotStatus = document.getElementById("pilotStatus") // is pilot ready or not?
   let copilotStatus = document.getElementById("copilotStatus") // is copilot ready or not?
