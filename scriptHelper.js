@@ -39,7 +39,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
 
       //check if pilotName, copilotName, fuelLevel, cargoLevel are empty strings
       if (pilotName === "" || copilotName === "" || fuelLevel === "" || cargoMass === "") {
-      alert("Each form must be filled out");
+      alert("Empty fields must be filled out, homie");
       }
       
       if (fuelLevel === NaN || cargoMass === NaN) { // makes sure fuelLevel and cargoMass are numbers
