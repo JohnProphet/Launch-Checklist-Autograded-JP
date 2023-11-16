@@ -1,4 +1,6 @@
-    window.addEventListener("load", function(event) {   
+//require('scriptHelper.js');
+   
+   window.addEventListener("load", function(event) {   
         let listedPlanets;
         let listedPlanetsResponse=myFetch();
                 
