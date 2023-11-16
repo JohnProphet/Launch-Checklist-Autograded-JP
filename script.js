@@ -6,9 +6,8 @@
             listedPlanets = result;
             }).then(function () {
             // calls the appropriate helper functions to pick a planet fom the list of planets and add that information to your destination.
-            let studentPlanet = pickPlanet(planets); //picks a planet from the JSON
-
-            addDestinationInfo(document, studentPlanet.name, studentPlanet.diameter, studentPlanet.star, studentPlanet.distance, studentPlanet.moons, studentPlanet.image); //adds info from the JSON to the chosen destination
+            let randomPlanet = pickPlanet(planets); //picks a planet from the JSON
+            addDestinationInfo(document, randomPlanet.name, randomPlanet.diameter, randomPlanet.star, randomPlanet.distance, randomPlanet.moons, randomPlanet.image); //adds info from the JSON to the chosen destination
             })
     
         document.addEventListener("submit", function(event) {
