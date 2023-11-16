@@ -53,6 +53,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     //checks if cargoMass and fuelLevel are within appropriate ranges
     if (cargoMass < 10000 && fuelLevel >= 10000) 
     {
+      // list.style.visibility = "hidden";
       launchStatus.innerHTML = "Shuttle is Ready for Launch";
       launchStatus.style.color = "green";
       cargoStatus.innerHTML = "Cargo mass low enough for launch";
@@ -60,8 +61,9 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     }
   
     // if fuel level is 10,000 or more, list stays hidden
-    if (fuelLevel >= 10000) 
+    if (fuelLevel >= 10000)
     {
+      //  list.style.visibility = "hidden";
       launchStatus.innerHTML = "Shuttle is Ready for Launch";
       launchStatus.style.color = "green";
       fuelStatus.innerHTML = "Fuel level high enough for launch";
@@ -79,6 +81,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     //check if cargo mass is <10,000
     if (cargoMass < 10000) 
     { 
+      // list.style.visibility = "hidden";
       cargoStatus.innerHTML = "Cargo mass low enough for launch";
     }
     else 
