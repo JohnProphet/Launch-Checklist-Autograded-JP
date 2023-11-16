@@ -39,7 +39,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
       if (validateInput(fuelLevel) === "Not a Number" || validateInput(cargoMass) === "Not a Number") { // makes sure fuelLevel and cargoMass are numbers
         alert("fuelLevel and cargoMass must be numbers");
       }
-      if (pilotName !=="" && copilotName !=="") { //if pilot and copilot are not blank
+      if (pilotName !=="" && copilotName !=="") { //Make sure pilot and copilot are not blank
           pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
           copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
       }
