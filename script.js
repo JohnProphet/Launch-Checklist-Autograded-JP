@@ -13,11 +13,11 @@
     
         document.addEventListener("submit", function(event) {
             event.preventDefault(); 
-            const pilotName = document.querySelector("input[name=pilotName]").value
-            const copilotName = document.querySelector("input[name=copilotName]").value
-            const fuelLevel = document.querySelector("input[name=fuelLevel]").value
-            const cargoMass = document.querySelector("input[name=cargoMass]").value
-            const list = document.getElementById("input[name=faultyItems]")      
+            const pilotName = document.querySelector("input[name=pilotName]").value;
+            const copilotName = document.querySelector("input[name=copilotName]").value;
+            const fuelLevel = document.querySelector("input[name=fuelLevel]").value;
+            const cargoMass = document.querySelector("input[name=cargoMass]").value;
+            const list = document.getElementById("input[name=faultyItems]");
  
             formSubmission(document, list, pilotName, copilotName, fuelLevel, cargoMass);
         }
